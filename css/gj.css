@@ -1,0 +1,104 @@
+body
+{
+	background-color: #703C3B;
+	color: #FFBFBD;
+}
+
+a
+{
+	color: #FFBFBD !important; 
+}
+
+a:hover
+{
+	color: #FFFFFF !important;
+}
+
+.btn
+{
+	background-color: #FFBFBD !important;
+	border-color: #2B0908 !important;
+	color: #2B0908 !important;
+}
+
+.btn:hover
+{
+	background-color: #2B0908 !important;
+}
+
+.carouselCaption
+{
+	background-color: #B00C00;
+	color: #FFBFBD;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.gjBar
+{
+	background-color: #800000;
+}
+
+.gjList
+{
+	list-style-type: none;
+	color: #FFBFBD;
+}
+
+.gjPanel
+{
+	background-color: #B00C00 !important;
+	color: #FFBFBD !important;
+}
+
+.icon-bar
+{
+	background-color: #FFBFBD !important;
+}
+
+.carousel .fill
+{
+	background-position: center top !important;
+}
+
+.navbar-toggle:focus
+{
+	background-color: #2B0908 !important;
+}
+
+.navbar-toggle:hover
+{
+	background-color: #2B0908 !important;
+}
+
+.panel
+{
+	background-color: #FFBFBD;
+	color: #2B0908;
+}
+
+.serverBanner
+{
+	background-image: url("../images/muffin.jpg");
+}
+
+.serverCaption
+{	
+	width: 185px;
+}
+
+.thirdBanner
+{
+	background-image: url("../images/ELEBanner.jpg");
+}
+
+.welcomeBanner
+{
+	background-image: url("../images/youNeedMeBanner.jpg");
+	background-repeat: no-repeat;
+}
+
+.welcomeCaption
+{	
+	width: 150px;
+}
