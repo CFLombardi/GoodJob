@@ -9,15 +9,14 @@
     <meta name="description" content="Don't like the current color scheme, play around and we may just change the site to what you come up with here">
     <meta name="author" content="Anthony Tyrpak">
 
-    <title>Good Job! Site Color Picker</title>
+    <title>Good Job! Color Picker</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/modern-business.css" rel="stylesheet">
-	
 	<link href="css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
 	
 	<!-- Good Job CSS -->
 	<link href = "css/gj.css" rel = "stylesheet" type = "text/css">
@@ -47,11 +46,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" id="gjName" href="index.html">Good Job!</a>
+                <a class="navbar-brand" href="index.html" id="navBar">Good Job! Navigation bar</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#" id="navText"></a>
+					</li>
                     <li>
                         <a href="#">About</a>
                     </li>
@@ -74,11 +76,12 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header quote" id="title">Welcome to the Good Job! Site Color Picker</h1>
+                <h1 class="page-header quote">Good Job! Site Color Picker</h1>
 				<div class="col-md-4">
+					<h1 class="quote" id="title">Title</h1>
 					<div class="panel panel-default">
 						<div class="panel-heading gjPanel" id="panelHeader">
-							<h4><i class="glyphicon glyphicon-globe"></i> Cool, alright!</h4>
+							<h4 id="panelTitle">Panel header</h4>
 						</div>
 						<div class="panel-body" id="panelBody">
 							<p>Below are the different elements that make up our site.  Pick a color you'd like to change that element to and see how it looks</p>
@@ -96,7 +99,7 @@
 					<select class="selectpicker" id="selectList">
 						<option value="gjBar">Navigation bar</option>
 						<option value="gjName">Navigation text</option>
-						<option value="title">Title</option>
+						<option value="title">Title and site text</option>
 						<option value="panelHeader">Panel header</option>
 						<option value="panelHeaderText">Panel header text</option>
 						<option value="panelBody">Panel body</option>
@@ -109,7 +112,7 @@
 				</div>
 			</div>
 			<div class="col-lg-12">
-				<button type="button" class="btn btn-info submitBtn" onclick="updateElement()">Submit</button>
+				<button type="button" class="btn submitBtn" id="submit" onclick="updateElement()">Submit</button>
 			</div>
         </div>
         <!-- /.row -->
@@ -148,19 +151,42 @@
 			
 			switch(element) {
 				case "gjBar":
-					document.getElementById("gjBar").style.background = "#"+color;
+					var navBar = document.getElementById("gjBar");
+					var navBarText = document.getElementById("navBar");
+					
+					navBar.style.background = "#"+color;
+					navBarText.textContent = "Good Job! Navigation bar #"+color;
+					
 				break;
 				
 				case "gjName":
-					document.getElementById("gjName").style.color = "#"+color;
+					var links = document.getElementsByTagName("a");
+					var linkColor = document.getElementById("navText");
+					
+					for(var i = 0; i < links.length; i++) {
+						links[i].style.color = "#"+color;
+					}
+					linkColor.textContent = "#"+color;
 				break;
 				
 				case "title":
-					document.getElementById("title").style.color = "#"+color;
+					var headers = document.getElementsByTagName("h1");
+					var bodyText = document.getElementsByTagName("body")[0];
+					var titleColor = document.getElementById("title");
+					
+					for(var i = 0; i < headers.length; i++) {
+						headers[i].style.color = "#"+color;
+					}
+					bodyText.style.color = "#"+color;
+					titleColor.textContent = "Title #"+color;
 				break;
 				
 				case "panelHeader":
-					document.getElementById("panelHeader").style.background = "#"+color;
+					var pHeader = document.getElementById("panelHeader");
+					var pTitle = document.getElementById("panelTitle");
+					
+					pHeader.style.background = "#"+color;
+					pTitle.textContent = "Panel header #"+color;
 				break;
 				
 				case "panelHeaderText":
@@ -169,10 +195,12 @@
 				
 				case "panelBody":
 					document.getElementById("panelBody").style.background = "#"+color;
+					document.getElementById("submit").style.background = "#"+color;
 				break;
 				
 				case "panelBodyText":
 					document.getElementById("panelBody").style.color = "#"+color;
+					document.getElementById("submit").style.color = "#"+color;
 				break;
 				
 				case "background":
