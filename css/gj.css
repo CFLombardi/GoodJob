@@ -6,7 +6,7 @@ body
 
 a:hover
 {
-	color: #FFFFFF !important;
+	color: #ffffff;
 }
 
 h6 {
@@ -15,9 +15,9 @@ h6 {
 
 .btn
 {
-	background-color: #FFBFBD !important;
-	border-color: #2B0908 !important;
-	color: #2B0908 !important;
+	background-color: #ffbfbd;
+	border-color: #2b0908 !important;
+	color: #2b0908;
 }
 
 .carousel .fill
@@ -48,6 +48,7 @@ h6 {
 {
 	background-color: #b00c00;
 	color: #ffbfbd;
+	text-align: center;
 }
 
 .icon-bar
