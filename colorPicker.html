@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Don't like the current color scheme, play around and we may just change the site to what you come up with here">
+    <meta name="author" content="Anthony Tyrpak">
+
+    <title>Good Job! Site Color Picker</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+	
+	<link href="css/bootstrap-select.min.css" rel="stylesheet">
+	
+	<!-- Good Job CSS -->
+	<link href = "css/gj.css" rel = "stylesheet" type = "text/css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top gjBar" id="gjBar" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="gjName" href="index.html">Good Job!</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="http://www.gameservers.com/clanpay/?clanid=6c60c3ce97836f8886398a571847392f" target="_blank">Donate</a>
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/site/gjgextralife14/" target="_blank">Extra Life</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header quote" id="title">Welcome to the Good Job! Site Color Picker</h1>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading gjPanel" id="panelHeader">
+							<h4><i class="glyphicon glyphicon-globe"></i> Cool, alright!</h4>
+						</div>
+						<div class="panel-body" id="panelBody">
+							<p>Below are the different elements that make up our site.  Pick a color you'd like to change that element to and see how it looks</p>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Intro Content -->
+        <div class="row">
+			<div class="col-lg-12">
+				<div class="col-md-6 sameLine">
+					<select class="selectpicker" id="selectList">
+						<option value="gjBar">Navigation bar</option>
+						<option value="gjName">Navigation text</option>
+						<option value="title">Title</option>
+						<option value="panelHeader">Panel header</option>
+						<option value="panelHeaderText">Panel header text</option>
+						<option value="panelBody">Panel body</option>
+						<option value="panelBodyText">Panel body text</option>
+						<option value="background">Site background</option>
+					</select>
+				</div>
+				<div class="col-md-6 sameLine">
+					<input class="color" id="colorPicker" value="800000">
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<button type="button" class="btn btn-info submitBtn" onclick="updateElement()">Submit</button>
+			</div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Good Job! 2005</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- JS Color picker -->
+	<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
+	
+	<script type="text/javascript" src="js/bootstrap-select.js"></script>
+	
+	<!-- Custom scripts -->
+	<script>
+		function updateElement() {
+			var color = document.getElementById("colorPicker").color.toString();
+			var e = document.getElementById("selectList")
+			var element = e.options[e.selectedIndex].value;
+			
+			switch(element) {
+				case "gjBar":
+					document.getElementById("gjBar").style.background = "#"+color;
+				break;
+				
+				case "gjName":
+					document.getElementById("gjName").style.color = "#"+color;
+				break;
+				
+				case "title":
+					document.getElementById("title").style.color = "#"+color;
+				break;
+				
+				case "panelHeader":
+					document.getElementById("panelHeader").style.background = "#"+color;
+				break;
+				
+				case "panelHeaderText":
+					document.getElementById("panelHeader").style.color = "#"+color;
+				break;
+				
+				case "panelBody":
+					document.getElementById("panelBody").style.background = "#"+color;
+				break;
+				
+				case "panelBodyText":
+					document.getElementById("panelBody").style.color = "#"+color;
+				break;
+				
+				case "background":
+					document.getElementsByTagName("body")[0].style.backgroundColor = "#"+color;
+				break;
+			}
+		}
+		
+		$(".selectpicker").selectpicker();
+	</script>
+
+</body>
+
+</html>
