@@ -1,12 +1,12 @@
 body
 {
-	background-color: #703C3B;
-	color: #FFBFBD;
+	background-color: #2D2D29;
+	color: #92C7A3;
 }
 
 a:hover
 {
-	color: #ffffff;
+	color: #3CA2A2 !important;
 }
 
 h6 {
@@ -15,9 +15,13 @@ h6 {
 
 .btn
 {
-	background-color: #ffbfbd;
+	background-color: #3CA2A2 !important;
 	border-color: #2b0908 !important;
-	color: #2b0908;
+	color: #FFFFFF;
+}
+
+.btn:hover {
+	background-color: #FFFFFF !important;
 }
 
 .carousel .fill
@@ -27,27 +31,31 @@ h6 {
 
 .carouselCaption
 {
-	background-color: #B00C00;
-	color: #FFBFBD;
+	background-color: #3CA2A2;
+	color: #FFFFFF;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+.gj {
+	color: #DFECE6 !important;
+}
+
 .gjBar
 {
-	background-color: #800000;
+	background-color: #215A6D;
 }
 
 .gjList
 {
 	list-style-type: none;
-	color: #FFBFBD;
+	color: #92C7A3;
 }
 
 .gjPanel
 {
-	background-color: #b00c00;
-	color: #ffbfbd;
+	background-color: #3CA2A2 !important;
+	color: #FFFFFF !important;
 	text-align: center;
 }
 
@@ -68,8 +76,8 @@ h6 {
 
 .panel
 {
-	background-color: #FFBFBD;
-	color: #2B0908;	
+	background-color: #DFECE6;
+	color: #000000;	
 }
 
 .quote {
