@@ -70,7 +70,13 @@ h6 {
 .item {
 	margin-left: auto;
 	margin-right: auto;
-	width: 580px;
+	
+}
+
+@media (min-width: 580px) {
+	.item {
+		width: 580px;
+	}
 }
 
 .navbar-toggle:focus
