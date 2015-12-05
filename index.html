@@ -195,10 +195,24 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
-    <script>		
-		$('.carousel').carousel({
-			interval: 5000 //changes the speed
-		})	
+    <script>
+	var timeInterval = 5000;
+	
+	$('.carousel').carousel({
+		interval: timeInterval //changes the speed
+	})
+	
+	$(document).ready(function() {
+		$(".carousel").on("slide.bs.carousel", function(e) {
+			var slideFrom = $(this).find(".active").index();
+			var slideTo = $(e.relatedTarget).index();
+			if(slideTo === 0) {
+				$(".carousel-inner").css("background-color", "#FFFFFF");
+			} else {
+				$(".carousel-inner").css("background-color", "#000000");
+			}
+		});
+	});
     </script>
 	
 </body>
