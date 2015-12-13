@@ -193,12 +193,21 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<!-- JS Color picker -->
+	<script type="text/javascript" src="js/jscolor/jscolor.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>		
 		$('.carousel').carousel({
 			interval: 5000 //changes the speed
-		})	
+		})
+		
+		setInterval("changeBackground", 5000);
+		
+		function changeBackground() {
+			$(".carousel-inner").animate({backgroundColor: "#000000"}, "slow");
+		}
     </script>
 	
 </body>
