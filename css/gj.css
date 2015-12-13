@@ -9,6 +9,10 @@ a:hover
 	color: #3CA2A2 !important;
 }
 
+.btn:focus {
+	color: #FFFFFF;
+}
+
 h6 {
 	margin-bottom: 0px;
 }
