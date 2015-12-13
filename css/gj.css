@@ -37,10 +37,6 @@ h6 {
 	margin-right: auto;
 }
 
-.carousel-inner {
-	background-color: #FFFFFF;
-}
-
 .gj {
 	color: #DFECE6 !important;
 }
@@ -66,12 +62,6 @@ h6 {
 .icon-bar
 {
 	background-color: #FFBFBD !important;
-}
-
-.item {
-	margin-left: auto;
-	margin-right: auto;
-	width: 560px;
 }
 
 .navbar-toggle:focus
@@ -115,12 +105,12 @@ h6 {
 
 .thirdBanner
 {
-	background-image: url("../images/ELE.jpg");
+	background-image: url("../images/ELEBanner.jpg");
 }
 
 .welcomeBanner
 {
-	background-image: url("../images/youNeedMe.jpg");
+	background-image: url("../images/youNeedMeBanner.jpg");
 	background-repeat: no-repeat;
 }
 
