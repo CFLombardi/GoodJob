@@ -29,6 +29,10 @@ h6 {
 	background-position: center top !important;
 }
 
+.carousel-indicators>.active {
+	background-color: #606060;
+}
+
 .carousel-inner {
 	background-color: #FFFFFF;
 }
@@ -70,7 +74,6 @@ h6 {
 .item {
 	margin-left: auto;
 	margin-right: auto;
-	
 }
 
 @media (min-width: 580px) {
@@ -120,12 +123,12 @@ h6 {
 
 .thirdBanner
 {
-	background-image: url("../images/ELEBanner.jpg");
+	background-image: url("../images/ELE.jpg");
 }
 
 .welcomeBanner
 {
-	background-image: url("../images/logo-4-wings copy.png");
+	background-image: url("../images/gjLogo.jpg");
 	background-repeat: no-repeat;
 }
 
