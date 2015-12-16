@@ -33,6 +33,16 @@ h6 {
 	background-position: center top !important;
 }
 
+@media (min-width: 415px) {
+	.carousel-inner>.left {
+		width: 580px !important;
+	}
+	
+	.carousel-inner>.next {
+		left: 400px !important;
+	}
+}
+
 .carousel-indicators>.active {
 	background-color: #3CA2A2;
 }
